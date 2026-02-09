@@ -1,0 +1,48 @@
+\documentclass[aspectratio=1210]{beamer}
+
+\input{.setup.tex}
+
+\title{Ausnutzung von Prozessorlücken}
+\author{Enrico Stemmer}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+	\customnote{*Test* Markdown}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Übersicht}
+	\tableofcontents
+\end{frame}
+
+\section{Einleitung}
+\subsection{Vorstellung}
+\begin{frame}{\insertsubsection}
+	\begin{itemize}
+		\item \textbf{Name:} Enrico Stemmer
+		\item \textbf{Beruf:} Dualer student bei ARCA-Consult (Softwareentwickler)
+		      \customnote{Beratung für IT Security und Informationssicherheit.}
+		      \vspace{0.5cm}
+		\item Präsentation auf \href{https://github.com/h3rmt-thi/praxis}{\texttt{https://github.com/h3rmt-thi/praxis}}
+		      \customnote{Fragen zwischendurch gerne stellen.}
+	\end{itemize}
+\end{frame}
+
+\subsection{Einführung}
+\begin{frame}{\insertsubsection\ (Was sind Prozessorlücken?)}
+	\begin{itemize}
+		\item \textbf{Ziel:} Arbeitsspeicher auslesen
+		\item Speicherisolation durch Betriebssystem wird umgangen
+		      \customnote{*OS* separiert Speicherbereiche, damit Programme nicht aufeinander zugreifen können. MMU (Memory Management Unit)}
+		      \customnote{Browser: V8 JavaScript Isolates}
+		\item Zugriff auf fremden Speicher (Programme, Kernel, VMs)
+		      \customnote{Cloudcomputing als angriffsziel, weil viele VMs auf einem Server}
+		\item Es muss bereits Code auf dem Zielsystem ausgeführt werden
+		      \customnote{aber auch JS auf webiste an sich code execution}
+		      \customnote{gibt remote spectre}
+	\end{itemize}
+\end{frame}
+
+\end{document}
