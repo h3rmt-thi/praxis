@@ -8,263 +8,264 @@
 \begin{document}
 
 \begin{frame}
-    \titlepage
-    \customnote{*Test*}
+	\titlepage
+	\customnote{*Test*}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Übersicht}
-    \tableofcontents
+	\frametitle{Übersicht}
+	\tableofcontents
 \end{frame}
 
 \section{Einleitung}
 \subsection{Vorstellung}
 \begin{frame}[fragile]{\insertsubsection}
-    \begin{itemize}
-        \item<1-2> \textbf{Name:} Enrico Stemmer
-        \item<1-2> \textbf{Beruf:} Dualer Student bei ARCA-Consult (Firmeninterne IT)
-              \customnote<1>{Beratung für IT Security und Informationssicherheit.}
-              \customnote<1>{Viel normen für andere firmen}
-              \customnote<1>{Aber auch customizing und aufsetzen von ISMS und IAM Systemen.}
-              \vspace{0.2cm}
-        \item<1-2> Zeitraum: 01.08.2025 - 18.12.2025
-              \vspace{0.2cm}
-        \item<2> Präsentation auf \href{https://github.com/h3rmt-thi/praxis}{\texttt{https://github.com/h3rmt-thi/praxis}}
-              \customnote<2>{Präsentation mit Latex Beamer und Nix ans Buildsystem für Builden, Präsentieren usw.}
-              \customnote<2>{Fragen zwischendurch gerne stellen.}
-    \end{itemize}
+	\begin{itemize}
+		\item<1-2> \textbf{Name:} Enrico Stemmer
+		\item<1-2> \textbf{Beruf:} Dualer Student bei ARCA-Consult (Firmeninterne IT)
+		      \customnote<1>{Beratung für IT Security und Informationssicherheit.}
+		      \customnote<1>{Viel normen für andere firmen}
+		      \customnote<1>{Aber auch customizing und aufsetzen von ISMS und IAM Systemen.}
+		      \vspace{0.2cm}
+		\item<1-2> Zeitraum: 01.08.2025 - 18.12.2025
+		      \vspace{0.2cm}
+		\item<2> Präsentation auf \href{https://github.com/h3rmt-thi/praxis}{\texttt{https://github.com/h3rmt-thi/praxis}}
+		      \customnote<2>{Präsentation mit Latex Beamer und Nix ans Buildsystem für Builden, Präsentieren usw.}
+		      \customnote<2>{Fragen zwischendurch gerne stellen.}
+	\end{itemize}
 \end{frame}
 
 \subsection{ARCA-Consult}
 \begin{frame}{\insertsubsection}
-    \begin{tikzpicture}[remember picture,overlay]
-        \node[anchor=north east, xshift=-0.2cm, yshift=-0.2cm] at (current page.north east) {
-            \includegraphics[width=2cm]{arca.png}
-        };
-    \end{tikzpicture}
-    \begin{itemize}
-        \item Spezialisiert auf IT-Sicherheit und Informationssicherheit
-        \item Beratung zu Compliance und Normen (ISO 27001, etc.)
-              \customnote{Viele Normen, z.B. ISO 27001/2, TISAX, BSI IT-Grundschutz, NIS-2, etc}
-        \item Implementierung von Information Security Management Systems \textit{(ISMS)}
-              \customnote{ISMS: System zur Verwaltung der Informationssicherheit in einem Unternehmen}
-              \customnote{beinhaltet: \textbf{Regeln}, \textbf{Verfahren}, \textbf{Maßnahmen} und Tools}
-              \customnote{Informationssicherheit: schützt Daten/Systeme vor unbefugtem Zugriff, Manipulation und Verlust}
-        \item Identity Access Management \textit{(IAM)} Lösungen
-              \customnote{IAM: Verwaltung von Benutzeridentitäten und Zugriff auf Ressourcen}
-        \item Unterstützung für Unternehmen bei IT-Sicherheitsstrategien
-    \end{itemize}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[anchor=north east, xshift=-0.2cm, yshift=-0.2cm] at (current page.north east) {
+			\includegraphics[width=2cm]{arca.png}
+		};
+	\end{tikzpicture}
+	\begin{itemize}
+		\item Spezialisiert auf IT-Sicherheit und Informationssicherheit
+		\item Beratung zu Compliance und Normen (ISO 27001, etc.)
+		      \customnote{Viele Normen, z.B. ISO 27001/2, TISAX, BSI IT-Grundschutz, NIS-2, etc}
+		\item Implementierung von Information Security Management Systems \textit{(ISMS)}
+		      \customnote{ISMS: System zur Verwaltung der Informationssicherheit in einem Unternehmen}
+		      \customnote{beinhaltet: **Regeln**, **Verfahren**, **Maßnahmen** und Tools}
+		      \customnote{Informationssicherheit: schützt Daten/Systeme vor unbefugtem Zugriff, Manipulation und Verlust}
+		\item Identity Access Management \textit{(IAM)} Lösungen
+		      \customnote{IAM: Verwaltung von Benutzeridentitäten und Zugriff auf Ressourcen}
+		\item Unterstützung für Unternehmen bei IT-Sicherheitsstrategien
+	\end{itemize}
 \end{frame}
 
 \section{Projekte}
 \subsection{Entwickeln eines Prototypen für die Verwaltung von Normen und Maßnahmen}
 \begin{frame}{Entwickeln eines Prototypen für die \\ Verwaltung von Normen und Maßnahmen}
-    \begin{tikzpicture}[remember picture,overlay]
-        \node[anchor=north east, xshift=-0.2cm, yshift=-0.2cm] at (current page.north east) {
-            \includegraphics[width=2cm]{arca.png}
-        };
-    \end{tikzpicture}
-    \begin{onlyenv}<1>
-        \begin{itemize}
-            \item Früher: Next.js, Ohne REST-API, Direkter Datenbankzugriff im Backend
-            \item Next.js verursachte Probleme:
-                  \begin{itemize}
-                      \item langsamer Build
-                      \item zu aggressives Caching
-                      \item unpassende Defaults
-                      \item schwer vorhersehbarer Controlflow
-                  \end{itemize}
-        \end{itemize}
-    \end{onlyenv}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[anchor=north east, xshift=-0.2cm, yshift=-0.2cm] at (current page.north east) {
+			\includegraphics[width=2cm]{arca.png}
+		};
+	\end{tikzpicture}
+	\begin{onlyenv}<1>
+		\begin{itemize}
+			\item Früher: Next.js, Ohne REST-API, Direkter Datenbankzugriff im Backend
+			\item Next.js verursachte Probleme:
+			      \begin{itemize}
+				      \item langsamer Build
+				      \item zu aggressives Caching
+				      \item unpassende Defaults
+				      \item schwer vorhersehbarer Controlflow
+			      \end{itemize}
+		\end{itemize}
+	\end{onlyenv}
 
-    \begin{onlyenv}<2>
-        \begin{itemize}
-            \item Neu: klare Trennung Frontend / Backend
-            \item \textbf{Frontend}: React + TanStack Router + TanStack Query
-            \item Vorteile:
-                  \begin{itemize}
-                      \item Schnellerer Build (2+min $\rightarrow$ 10s)
-                      \item bessere Caching-Strategien, mehr Kontrolle über Routing und Daten-Fetching
-                      \item Wiederverwenden von vielen Componenten des alten Prototyps
-                      \item Automatisierte Generierung von API-Clients mit orval.js
-                  \end{itemize}
-            \item Nachteile:
-                  \begin{itemize}
-                      \item Managen von API Specs und Code-Generation
-                      \item Anpassung von Komponenten an neue Daten-Fetching-Strategien
-                            \customnote<2>{Ein API endpoint anstatt spezifischen DB Queries pro component}
-                  \end{itemize}
-                  \vspace{1.5cm}
-        \end{itemize}
-    \end{onlyenv}
+	\begin{onlyenv}<2>
+		\begin{itemize}
+			\item Neu: klare Trennung Frontend / Backend
+			\item \textbf{Frontend}: React + TanStack Router + TanStack Query
+			\item Vorteile:
+			      \begin{itemize}
+				      \item Schnellerer Build (2+min $\rightarrow$ 10s)
+				      \item bessere Caching-Strategien, mehr Kontrolle über Routing und Daten-Fetching
+				      \item Wiederverwenden von vielen Componenten des alten Prototyps
+				      \item Automatisierte Generierung von API-Clients mit orval.js
+			      \end{itemize}
+			\item Nachteile:
+			      \begin{itemize}
+				      \item Managen von API Specs und Code-Generation
+				      \item Anpassung von Komponenten an neue Daten-Fetching-Strategien
+				            \customnote<2>{Ein API endpoint anstatt spezifischen DB Queries pro component}
+			      \end{itemize}
+			      \vspace{1.5cm}
+		\end{itemize}
+	\end{onlyenv}
 
-    \begin{onlyenv}<3>
-        \begin{itemize}
-            \item \textbf{Backend}: JVM, Ktor als Framework, JOOQ als ORM
-            \item Sprache: Kotlin statt Java
-                  \begin{itemize}
-                      \item Kürzere, ausdrucksstarke Syntax, weniger Boilerplate
-                      \item Null-Safety und Coroutines
-                      \item Gute Interoperabilität mit Java-Ökosystem und Libraries
-                      \item Flexible Programmierparadigmen (funktional, objektorientiert, prozedural)
-                  \end{itemize}
-        \end{itemize}
-    \end{onlyenv}
+	\begin{onlyenv}<3>
+		\begin{itemize}
+			\item \textbf{Backend}: JVM, Ktor als Framework, JOOQ als ORM
+			\item Sprache: Kotlin statt Java
+			      \begin{itemize}
+				      \item Kürzere, ausdrucksstarke Syntax, weniger Boilerplate
+				      \item Null-Safety und Coroutines
+				      \item Gute Interoperabilität mit Java-Ökosystem und Libraries
+				      \item Flexible Programmierparadigmen (funktional, objektorientiert, prozedural)
+			      \end{itemize}
+		\end{itemize}
+	\end{onlyenv}
 
-    \begin{onlyenv}<4>
-        \begin{itemize}
-            \item \textbf{Datenzugriff}: verschiedene ORMs / Query-Builder ausprobiert
-                  \begin{itemize}
-                      \item Kotlin Exposed
-                            \customnote<4>{Kein R2DBC Support}
-                      \item Komapper
-                            \customnote<4>{Beide, schema in code, generiert migrations}
-                      \item JOOQ, Migrations mit Flyway
-                            \customnote<4>{generiert Kotlin interfaces basierend auf DB schema}
-                  \end{itemize}
+	\begin{onlyenv}<4>
+		\begin{itemize}
+			\item \textbf{Datenzugriff}: verschiedene ORMs / Query-Builder ausprobiert
+			      \begin{itemize}
+				      \item Kotlin Exposed
+				            \customnote<4>{Kein R2DBC Support}
+				      \item Komapper
+				            \customnote<4>{Beide, schema in code, generiert migrations}
+				      \item JOOQ, Migrations mit Flyway
+				            \customnote<4>{generiert Kotlin interfaces basierend auf DB schema}
+			      \end{itemize}
 
-            \item \textbf{Observability}: OpenTelemetry-Integration \\(Logs, Traces, Metrics)\\
-                  End-to-end Tracing (Frontend $\rightarrow$ Backend $\rightarrow$ DB)
-            \item \textbf{OpenAPI}: smiley4 ktor-openapi, Natives OpenAPI-Support in Ktor derzeit experimentell
-        \end{itemize}
-    \end{onlyenv}
+			\item \textbf{Observability}: OpenTelemetry-Integration \\(Logs, Traces, Metrics)\\
+			      End-to-end Tracing (Frontend $\rightarrow$ Backend $\rightarrow$ DB)
+			\item \textbf{OpenAPI}: smiley4 ktor-openapi, Natives OpenAPI-Support in Ktor derzeit experimentell
+		\end{itemize}
+	\end{onlyenv}
 \end{frame}
 
 \subsection{Alternative Infrastruktur zu Microsoft Cloud}
 \begin{frame}{Alternative Infrastruktur zu \\Microsoft Cloud}
-    \begin{tikzpicture}[remember picture,overlay]
-        \node[anchor=north east, xshift=-0.2cm, yshift=-0.2cm] at (current page.north east) {
-            \includegraphics[width=2cm]{arca.png}
-        };
-    \end{tikzpicture}
-    \begin{onlyenv}<1>
-        \begin{itemize}
-            \item Kostensteigerungen bei Microsoft 365
-            \item Viele "unnötige" Features
-                  \customnote<1>{z.B. Copilot, etc.}
-            \item Spezifische Workflows lassen sich nur schwer implementieren oder debuggen
-        \end{itemize}
-    \end{onlyenv}
-    \begin{onlyenv}<2-3>
-        \begin{itemize}
-            \item Ziel: Alternative Infrastruktur aufbauen, um Kosten zu senken und mehr Kontrolle zu haben
-            \item Fokus auf Moderne Open-Source/Source-Available-Tools und Selbsthosting
-            \item<3> Viel mehr Infrastruktur notwendig als Anfangs gedacht (VPN, Metrics, Backups, DNS, etc.)
-        \end{itemize}
-    \end{onlyenv}
-    \begin{onlyenv}<4>
-        \begin{itemize}
-            \item Ausgangssituation: Dedicated Server mit Proxmox bei OVH
-                  \customnote<4>{Proxmox: Open-Source Virtualisierungsplattform für VM-Management}
-                  \customnote<4>{OVH: 64GB RAM, 16 vCPU, 2TB NVMe}
-            \item Test-Umgebung mit Windows-VMs für IAM-Deployments
-                  \customnote<4>{Genutzt um IAM-Tools zu testen, Kundenumgebungen zu simulieren}
-            \item Kein Monitoring, keine Backups, kein ReverseProxy, etc.
-            \item Pritunl als VPN (OpenVPN/WireGuard Web UI)
-                  \customnote<4>{Open-Source VPN-Server, basiert auf OpenVPN und WireGuard}
-                  \customnote<4>{User müssen zip datei importieren, schlechter linux support, usw.}
-        \end{itemize}
-    \end{onlyenv}
-    \begin{onlyenv}<5-6>
-        \begin{itemize}
-            \item<5-6> Ausgangssituation: Dedicated Server mit Proxmox bei OVH
-            \item<5-6> Test-Umgebung mit Windows-VMs für IAM-Deployments
-            \item<5-6> Kein Monitoring, keine Backups, kein ReverseProxy, etc.
-                  \customnote<5>{ReverseProxy für \textbf{DNS + SSL}}
-            \item<5-6> Pritunl als VPN (OpenVPN/WireGuard Web UI)
-                  \vspace{0.8cm}
-            \item<6> Nächste Schritte: Weitere Tools evaluieren und Infrastruktur skalieren
-            \item<6> Ersetzen von Tools durch bessere Alternativen
-        \end{itemize}
-    \end{onlyenv}
-    \begin{onlyenv}<7>
-        \begin{itemize}
-            \item<7> \textbf{Keycloak} für Identity Access Management und SSO
-                  \customnote<7>{Anbinden an entra ID}
-                  \customnote<7>{Erlaubt login in proxmox UI per Microsoft Konto}
-                  \vspace{0.2cm}
-            \item<7> \textbf{NetBird} als moderne VPN-Alternative
-                  \begin{itemize}
-                      \item SSO-Integration und benutzerfreundliche Authentifizierung
-                      \item WireGuard-basiert für bessere Performance
-                      \item Granulare Zugriffskontrolle und Netzwerk-Segmentierung
-                            \customnote<7>{Dev server / Prod server, nur IT zugriff auf Dev services, etc.}
-                  \end{itemize}
-                  \vspace{0.2cm}
-            \item<9> \textbf{Caddy}/\textbf{Traefik} als Reverse Proxy und Load Balancer
-                  \vspace{0.2cm}
-            \item<9> \textbf{Prometheus}, \textbf{Loki}, \textbf{Tempo} + \textbf{Grafana} für Monitoring und Logging
-                  \vspace{0.2cm}
-            \item<13> \textbf{Ansible} für automatisierte, konsistente Deployments und Konfigurationsverwaltung
-            \item<13> \textbf{Semaphore UI} für vereinfachte Verwaltung und Ausführung von Ansible Playbooks      \end{itemize}
-    \end{onlyenv}
-    \begin{onlyenv}<8>
-        \begin{tikzpicture}[remember picture,overlay]
-            \node[anchor=center, yshift=-0.4cm] at (current page.center) {
-                \includegraphics[width=0.9\textwidth,keepaspectratio]{netbird.png}
-            };
-        \end{tikzpicture}
-    \end{onlyenv}
-    \begin{onlyenv}<9>
-        \begin{itemize}
-            \item<9> \textbf{Keycloak} für Identity Access Management und SSO
-                  \vspace{0.2cm}
-            \item<9> \textbf{NetBird} als moderne VPN-Alternative
-                  \begin{itemize}
-                      \item SSO-Integration und benutzerfreundliche Authentifizierung
-                      \item WireGuard-basiert für bessere Performance
-                      \item Granulare Zugriffskontrolle und Netzwerk-Segmentierung
-                  \end{itemize}
-                  \vspace{0.2cm}
-            \item<9> \textbf{Caddy}/\textbf{Traefik} als Reverse Proxy und Load Balancer
-                  \vspace{0.2cm}
-            \item<9> \textbf{Prometheus}, \textbf{Loki}, \textbf{Tempo} + \textbf{Grafana} für Monitoring und Logging
-                  \customnote<9>{Grafana auch an SSO angebunden}
-                  \vspace{0.2cm}
-            \item<13> \textbf{Ansible} für automatisierte, konsistente Deployments und Konfigurationsverwaltung
-            \item<13> \textbf{Semaphore UI} für vereinfachte Verwaltung und Ausführung von Ansible Playbooks      \end{itemize}
-    \end{onlyenv}
-    \begin{onlyenv}<10>
-        \begin{tikzpicture}[remember picture,overlay]
-            \node[anchor=center, yshift=-0.4cm] at (current page.center) {
-                \includegraphics[width=1.05\textwidth,keepaspectratio]{grafana.png}
-            };
-        \end{tikzpicture}
-    \end{onlyenv}
-    \begin{onlyenv}<11>
-        \begin{tikzpicture}[remember picture,overlay]
-            \node[anchor=center, yshift=-0.4cm] at (current page.center) {
-                \includegraphics[width=1.05\textwidth,keepaspectratio]{logs.png}
-            };
-        \end{tikzpicture}
-    \end{onlyenv}
-    \begin{onlyenv}<12>
-        \begin{tikzpicture}[remember picture,overlay]
-            \node[anchor=center, yshift=-0.4cm] at (current page.center) {
-                \includegraphics[width=1.05\textwidth,keepaspectratio]{traces.png}
-            };
-        \end{tikzpicture}
-    \end{onlyenv}
-    \begin{onlyenv}<13>
-        \begin{itemize}
-            \item<13> \textbf{Keycloak} für Identity Access Management und SSO
-                  \vspace{0.2cm}
-            \item<13> \textbf{NetBird} als moderne VPN-Alternative
-                  \begin{itemize}
-                      \item SSO-Integration und benutzerfreundliche Authentifizierung
-                      \item WireGuard-basiert für bessere Performance
-                      \item Granulare Zugriffskontrolle und Netzwerk-Segmentierung
-                  \end{itemize}
-                  \vspace{0.2cm}
-            \item<13> \textbf{Caddy}/\textbf{Traefik} als Reverse Proxy und Load Balancer
-                  \vspace{0.2cm}
-            \item<13> \textbf{Prometheus}, \textbf{Loki}, \textbf{Tempo} + \textbf{Grafana} für Monitoring und Logging
-                  \vspace{0.2cm}
-            \item<13> \textbf{Ansible} für automatisierte, konsistente Deployments und Konfigurationsverwaltung
-            \item<13> \textbf{Semaphore UI} für vereinfachte Verwaltung und Ausführung von Ansible Playbooks
-                  \customnote<13>{Einfach taskausführung über WebUI, Login per SSO}
-        \end{itemize}
-    \end{onlyenv}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[anchor=north east, xshift=-0.2cm, yshift=-0.2cm] at (current page.north east) {
+			\includegraphics[width=2cm]{arca.png}
+		};
+	\end{tikzpicture}
+	\begin{onlyenv}<1>
+		\begin{itemize}
+			\item Kostensteigerungen bei Microsoft 365
+			\item Viele "unnötige" Features
+			      \customnote<1>{z.B. Copilot, etc.}
+			\item Spezifische Workflows lassen sich nur schwer implementieren oder debuggen
+		\end{itemize}
+	\end{onlyenv}
+	\begin{onlyenv}<2-3>
+		\begin{itemize}
+			\item Ziel: Alternative Infrastruktur aufbauen, um Kosten zu senken und mehr Kontrolle zu haben
+			\item Fokus auf Moderne Open-Source/Source-Available-Tools und Selbsthosting
+			\item<3> Viel mehr Infrastruktur notwendig als Anfangs gedacht (VPN, Metrics, Backups, DNS, etc.)
+		\end{itemize}
+	\end{onlyenv}
+	\begin{onlyenv}<4>
+		\begin{itemize}
+			\item Ausgangssituation: Dedicated Server mit Proxmox bei OVH
+			      \customnote<4>{Proxmox: Open-Source Virtualisierungsplattform für VM-Management}
+			      \customnote<4>{OVH: 64GB RAM, 16 vCPU, 2TB NVMe}
+			\item Test-Umgebung mit Windows-VMs für IAM-Deployments
+			      \customnote<4>{Genutzt um IAM-Tools zu testen, Kundenumgebungen zu simulieren}
+			\item Kein Monitoring, keine Backups, kein ReverseProxy, etc.
+			\item Pritunl als VPN (OpenVPN/WireGuard Web UI)
+			      \customnote<4>{Open-Source VPN-Server, basiert auf OpenVPN und WireGuard}
+			      \customnote<4>{User müssen zip datei importieren, schlechter linux support, usw.}
+		\end{itemize}
+	\end{onlyenv}
+	\begin{onlyenv}<5-6>
+		\begin{itemize}
+			\item<5-6> Ausgangssituation: Dedicated Server mit Proxmox bei OVH
+			\item<5-6> Test-Umgebung mit Windows-VMs für IAM-Deployments
+			\item<5-6> Kein Monitoring, keine Backups, kein ReverseProxy, etc.
+			      \customnote<5>{ReverseProxy für \textbf{DNS + SSL}}
+			\item<5-6> Pritunl als VPN (OpenVPN/WireGuard Web UI)
+			      \vspace{0.8cm}
+			\item<6> Nächste Schritte: Weitere Tools evaluieren und Infrastruktur skalieren
+			\item<6> Ersetzen von Tools durch bessere Alternativen
+		\end{itemize}
+	\end{onlyenv}
+	\begin{onlyenv}<7>
+		\begin{itemize}
+			\item<7> \textbf{Keycloak} für Identity Access Management und SSO
+			      \customnote<7>{Anbinden an entra ID}
+			      \customnote<7>{Erlaubt login in proxmox UI per Microsoft Konto}
+			      \vspace{0.2cm}
+			\item<7> \textbf{NetBird} als moderne VPN-Alternative
+			      \begin{itemize}
+				      \item SSO-Integration und benutzerfreundliche Authentifizierung
+				      \item WireGuard-basiert für bessere Performance
+				      \item Granulare Zugriffskontrolle und Netzwerk-Segmentierung
+				            \customnote<7>{Dev server / Prod server, nur IT zugriff auf Dev services, etc.}
+			      \end{itemize}
+			      \vspace{0.2cm}
+			\item<9> \textbf{Caddy}/\textbf{Traefik} als Reverse Proxy und Load Balancer
+			      \vspace{0.2cm}
+			\item<9> \textbf{Prometheus}, \textbf{Loki}, \textbf{Tempo} + \textbf{Grafana} für Monitoring und Logging
+			      \vspace{0.2cm}
+			\item<13> \textbf{Ansible} für automatisierte, konsistente Deployments und Konfigurationsverwaltung
+			\item<13> \textbf{Semaphore UI} für vereinfachte Verwaltung und Ausführung von Ansible Playbooks
+		\end{itemize}
+	\end{onlyenv}
+	\begin{onlyenv}<8>
+		\begin{tikzpicture}[remember picture,overlay]
+			\node[anchor=center, yshift=-0.4cm] at (current page.center) {
+				\includegraphics[width=0.9\textwidth,keepaspectratio]{netbird.png}
+			};
+		\end{tikzpicture}
+	\end{onlyenv}
+	\begin{onlyenv}<9>
+		\begin{itemize}
+			\item<9> \textbf{Keycloak} für Identity Access Management und SSO
+			      \vspace{0.2cm}
+			\item<9> \textbf{NetBird} als moderne VPN-Alternative
+			      \begin{itemize}
+				      \item SSO-Integration und benutzerfreundliche Authentifizierung
+				      \item WireGuard-basiert für bessere Performance
+				      \item Granulare Zugriffskontrolle und Netzwerk-Segmentierung
+			      \end{itemize}
+			      \vspace{0.2cm}
+			\item<9> \textbf{Caddy}/\textbf{Traefik} als Reverse Proxy und Load Balancer
+			      \vspace{0.2cm}
+			\item<9> \textbf{Prometheus}, \textbf{Loki}, \textbf{Tempo} + \textbf{Grafana} für Monitoring und Logging
+			      \customnote<9>{Grafana auch an SSO angebunden}
+			      \vspace{0.2cm}
+			\item<13> \textbf{Ansible} für automatisierte, konsistente Deployments und Konfigurationsverwaltung
+			\item<13> \textbf{Semaphore UI} für vereinfachte Verwaltung und Ausführung von Ansible Playbooks      \end{itemize}
+	\end{onlyenv}
+	\begin{onlyenv}<10>
+		\begin{tikzpicture}[remember picture,overlay]
+			\node[anchor=center, yshift=-0.4cm] at (current page.center) {
+				\includegraphics[width=1.05\textwidth,keepaspectratio]{grafana.png}
+			};
+		\end{tikzpicture}
+	\end{onlyenv}
+	\begin{onlyenv}<11>
+		\begin{tikzpicture}[remember picture,overlay]
+			\node[anchor=center, yshift=-0.4cm] at (current page.center) {
+				\includegraphics[width=1.05\textwidth,keepaspectratio]{logs.png}
+			};
+		\end{tikzpicture}
+	\end{onlyenv}
+	\begin{onlyenv}<12>
+		\begin{tikzpicture}[remember picture,overlay]
+			\node[anchor=center, yshift=-0.4cm] at (current page.center) {
+				\includegraphics[width=1.05\textwidth,keepaspectratio]{traces.png}
+			};
+		\end{tikzpicture}
+	\end{onlyenv}
+	\begin{onlyenv}<13>
+		\begin{itemize}
+			\item<13> \textbf{Keycloak} für Identity Access Management und SSO
+			      \vspace{0.2cm}
+			\item<13> \textbf{NetBird} als moderne VPN-Alternative
+			      \begin{itemize}
+				      \item SSO-Integration und benutzerfreundliche Authentifizierung
+				      \item WireGuard-basiert für bessere Performance
+				      \item Granulare Zugriffskontrolle und Netzwerk-Segmentierung
+			      \end{itemize}
+			      \vspace{0.2cm}
+			\item<13> \textbf{Caddy}/\textbf{Traefik} als Reverse Proxy und Load Balancer
+			      \vspace{0.2cm}
+			\item<13> \textbf{Prometheus}, \textbf{Loki}, \textbf{Tempo} + \textbf{Grafana} für Monitoring und Logging
+			      \vspace{0.2cm}
+			\item<13> \textbf{Ansible} für automatisierte, konsistente Deployments und Konfigurationsverwaltung
+			\item<13> \textbf{Semaphore UI} für vereinfachte Verwaltung und Ausführung von Ansible Playbooks
+			      \customnote<13>{Einfach taskausführung über WebUI, Login per SSO}
+		\end{itemize}
+	\end{onlyenv}
 \end{frame}
 
 \end{document}
