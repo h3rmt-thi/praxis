@@ -38,5 +38,6 @@ install `James-Yu.latex-workshop` (LaTeX Workshop).
 
 It is recemended to set
 ```json
-"latex-workshop.latex.outDir": "%DIR%/out"
+"latex-workshop.latex.outDir": "%DIR%/out",
+"latex-workshop.formatting.latex": "latexindent"
 ```

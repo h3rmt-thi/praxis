@@ -50,17 +50,16 @@
 		% if frame changed - write a new header
 		% \ifdim\lastpn pt<\insertpagenumber pt
 		\ifnum\lastpn<\insertpagenumber\relax%
-			\begingroup
-				\let\#\hashchar
+			\begingroup%
+				\let\#\hashchar%
 				\immediate\write\pdfpcnotesfile{\#\#\# \insertpagenumber}%
-			\endgroup
-			\renewcommand{\lastpn}{\insertpagenumber}
+			\endgroup%
+			\renewcommand{\lastpn}{\insertpagenumber}%
 		\fi%
-
 		% write note to file
 		\immediate\write\pdfpcnotesfile{\unexpanded{- #1<br>}}%
-	}
-}
+	}%
+}%
 % close file on \end{document}
 \AtEndDocument{%
 	\immediate\closeout\pdfpcnotesfile
