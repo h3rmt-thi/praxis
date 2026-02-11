@@ -57,79 +57,6 @@
 \end{frame}
 
 \section{Projekte}
-\subsection{Entwickeln eines Prototypen für die Verwaltung von Normen und Maßnahmen}
-\begin{frame}{Entwickeln eines Prototypen für die \\ Verwaltung von Normen und Maßnahmen}
-	\begin{tikzpicture}[remember picture,overlay]
-		\node[anchor=north east, xshift=-0.2cm, yshift=-0.2cm] at (current page.north east) {
-			\includegraphics[width=2cm]{arca.png}
-		};
-	\end{tikzpicture}
-	\begin{onlyenv}<1>
-		\begin{itemize}
-			\item Früher: Next.js, Ohne REST-API, Direkter Datenbankzugriff im Backend
-			\item Next.js verursachte Probleme:
-			      \begin{itemize}
-				      \item langsamer Build
-				      \item zu aggressives Caching
-				      \item unpassende Defaults
-				      \item schwer vorhersehbarer Controlflow
-			      \end{itemize}
-		\end{itemize}
-	\end{onlyenv}
-
-	\begin{onlyenv}<2>
-		\begin{itemize}
-			\item Neu: klare Trennung Frontend / Backend
-			\item \textbf{Frontend}: React + TanStack Router + TanStack Query
-			\item Vorteile:
-			      \begin{itemize}
-				      \item Schnellerer Build (2+min $\rightarrow$ 10s)
-				      \item bessere Caching-Strategien, mehr Kontrolle über Routing und Daten-Fetching
-				      \item Wiederverwenden von vielen Componenten des alten Prototyps
-				      \item Automatisierte Generierung von API-Clients mit orval.js
-			      \end{itemize}
-			\item Nachteile:
-			      \begin{itemize}
-				      \item Managen von API Specs und Code-Generation
-				      \item Anpassung von Komponenten an neue Daten-Fetching-Strategien
-				            \customnote<2>{Ein API endpoint anstatt spezifischen DB Queries pro component}
-			      \end{itemize}
-			      \vspace{1.5cm}
-		\end{itemize}
-	\end{onlyenv}
-
-	\begin{onlyenv}<3>
-		\begin{itemize}
-			\item \textbf{Backend}: JVM, Ktor als Framework, JOOQ als ORM
-			\item Sprache: Kotlin statt Java
-			      \begin{itemize}
-				      \item Kürzere, ausdrucksstarke Syntax, weniger Boilerplate
-				      \item Null-Safety und Coroutines
-				      \item Gute Interoperabilität mit Java-Ökosystem und Libraries
-				      \item Flexible Programmierparadigmen (funktional, objektorientiert, prozedural)
-			      \end{itemize}
-		\end{itemize}
-	\end{onlyenv}
-
-	\begin{onlyenv}<4>
-		\begin{itemize}
-			\item \textbf{Datenzugriff}: verschiedene ORMs / Query-Builder ausprobiert
-			      \begin{itemize}
-				      \item Kotlin Exposed
-				            \customnote<4>{Kein R2DBC Support}
-				      \item Komapper
-				            \customnote<4>{Beide, schema in code, generiert migrations}
-				      \item JOOQ, Migrations mit Flyway
-				            \customnote<4>{generiert Kotlin interfaces basierend auf DB schema}
-			      \end{itemize}
-
-			\item \textbf{Observability}: OpenTelemetry-Integration \\(Logs, Traces, Metrics)\\
-			      End-to-end Tracing (Frontend $\rightarrow$ Backend $\rightarrow$ DB)
-			\item \textbf{OpenAPI}: smiley4 ktor-openapi, Natives OpenAPI-Support in Ktor derzeit experimentell
-		\end{itemize}
-	\end{onlyenv}
-\end{frame}
-
 \subsection{Alternative Infrastruktur zu Microsoft Cloud}
 \begin{frame}{Alternative Infrastruktur zu \\Microsoft Cloud}
 	\begin{tikzpicture}[remember picture,overlay]
@@ -172,9 +99,10 @@
 			\item<5-6> Kein Monitoring, keine Backups, kein ReverseProxy, etc.
 			      \customnote<5>{ReverseProxy für \textbf{DNS + SSL}}
 			\item<5-6> Pritunl als VPN (OpenVPN/WireGuard Web UI)
-			      \vspace{0.8cm}
+			      \vspace{1cm}
 			\item<6> Nächste Schritte: Weitere Tools evaluieren und Infrastruktur skalieren
 			\item<6> Ersetzen von Tools durch bessere Alternativen
+			      \vspace{0.4cm}
 		\end{itemize}
 	\end{onlyenv}
 	\begin{onlyenv}<7>
@@ -267,5 +195,85 @@
 		\end{itemize}
 	\end{onlyenv}
 \end{frame}
+
+\subsection{Entwickeln eines Prototypen für die Verwaltung von Normen und Maßnahmen}
+\begin{frame}{Entwickeln eines Prototypen für die \\ Verwaltung von Normen und Maßnahmen}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[anchor=north east, xshift=-0.2cm, yshift=-0.2cm] at (current page.north east) {
+			\includegraphics[width=2cm]{arca.png}
+		};
+	\end{tikzpicture}
+	\begin{onlyenv}<1>
+		\begin{itemize}
+			\item Früher: Next.js, Ohne REST-API, Direkter Datenbankzugriff im Backend
+			\item Next.js verursachte Probleme:
+			      \begin{itemize}
+				      \item langsamer Build
+				      \item zu aggressives Caching
+				      \item unpassende Defaults
+				      \item schwer vorhersehbarer Controlflow
+			      \end{itemize}
+		\end{itemize}
+	\end{onlyenv}
+
+	\begin{onlyenv}<2>
+		\begin{itemize}
+			\item Neu: klare Trennung Frontend / Backend
+			\item \textbf{Frontend}: React + TanStack Router + TanStack Query
+			\item Vorteile:
+			      \begin{itemize}
+				      \item Schnellerer Build (2+min $\rightarrow$ 10s)
+				      \item bessere Caching-Strategien, mehr Kontrolle über Routing und Daten-Fetching
+				      \item Wiederverwenden von vielen Componenten des alten Prototyps
+				      \item Automatisierte Generierung von API-Clients mit orval.js
+			      \end{itemize}
+			\item Nachteile:
+			      \begin{itemize}
+				      \item Managen von API Specs und Code-Generation
+				      \item Anpassung von Komponenten an neue Daten-Fetching-Strategien
+				            \customnote<2>{Ein API endpoint anstatt spezifischen DB Queries pro component}
+			      \end{itemize}
+			      \vspace{1.5cm}
+		\end{itemize}
+	\end{onlyenv}
+
+	\begin{onlyenv}<3>
+		\begin{itemize}
+			\item \textbf{Backend}: JVM, Ktor als Framework, JOOQ als ORM
+			\item Sprache: Kotlin statt Java
+			      \begin{itemize}
+				      \item Kürzere, ausdrucksstarke Syntax, weniger Boilerplate
+				      \item Null-Safety und Coroutines
+				      \item Gute Interoperabilität mit Java-Ökosystem und Libraries
+				      \item Flexible Programmierparadigmen % (funktional, objektorientiert, prozedural)
+			      \end{itemize}
+		\end{itemize}
+	\end{onlyenv}
+
+	\begin{onlyenv}<4>
+		\begin{itemize}
+			\item \textbf{Datenzugriff}: verschiedene ORMs / Query-Builder ausprobiert
+			      \begin{itemize}
+				      \item Kotlin Exposed
+				            \customnote<4>{Kein R2DBC Support}
+				      \item Komapper
+				            \customnote<4>{Beide, schema in code, generiert migrations}
+				      \item JOOQ, Migrations mit Flyway
+				            \customnote<4>{generiert Kotlin interfaces basierend auf DB schema}
+			      \end{itemize}
+
+			\item \textbf{Observability}: OpenTelemetry-Integration \\(Logs, Traces, Metrics)\\
+			      End-to-end Tracing (Frontend $\rightarrow$ Backend $\rightarrow$ DB)
+			\item \textbf{OpenAPI}: smiley4 ktor-openapi, Natives OpenAPI-Support in Ktor derzeit experimentell
+		\end{itemize}
+	\end{onlyenv}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		Vielen Dank für eure Aufmerksamkeit!
+	\end{center}
+\end{frame}
+
 
 \end{document}
